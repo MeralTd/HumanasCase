@@ -1,7 +1,7 @@
 
 <?php
-require_once('backend/helpers/date_helper.php');
-require_once('backend/data/data.php');
+require_once('../backend/helpers/date_helper.php');
+require_once('../backend/data/data.php');
 
 
 // --- Main API Logic ---
