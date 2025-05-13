@@ -17,5 +17,8 @@ RUN echo '<Directory /var/www/html/>\n\
 # Apache mod_rewrite'i etkinleştir
 RUN a2enmod rewrite
 
+# Dosya izinlerini ayarla (chmod komutu)
+RUN chmod -R 755 /var/www/html && chown -R www-data:www-data /var/www/html
+
 # Apache'yi başlat
 CMD ["apache2-foreground"]

@@ -1,0 +1,12 @@
+# .htaccess örneği
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+</IfModule>
+
+# Dosyaların düzgün çalışabilmesi için izinler
+<Directory /var/www/html/>
+    AllowOverride All
+    Require all granted
+</Directory>
