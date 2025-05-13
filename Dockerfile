@@ -1,9 +1,21 @@
 # PHP 8.2 ve Apache imajını kullan
 FROM php:8.2-apache
 
-# PHP uzantılarını ekle
+# Apache ve PHP için gerekli uzantıları yükle
 RUN docker-php-ext-install pdo pdo_mysql
 
-# Public dizinini kopyala
+# Public ve backend dizinlerini kopyala
 COPY ./public/ /var/www/html/
 COPY ./backend/ /var/www/html/backend/
+
+# Apache config dosyasına güvenlik ayarları ekle
+RUN echo '<Directory /var/www/html/>\n\
+    AllowOverride All\n\
+    Require all granted\n\
+</Directory>' >> /etc/apache2/apache2.conf
+
+# Apache mod_rewrite'i etkinleştir
+RUN a2enmod rewrite
+
+# Apache'yi başlat
+CMD ["apache2-foreground"]
