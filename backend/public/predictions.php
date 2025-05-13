@@ -1,7 +1,7 @@
 
 <?php
 require_once '../helpers/date_helper.php';
-require_once '../api/data.php';
+require_once '../data/data.php';
 
 
 
