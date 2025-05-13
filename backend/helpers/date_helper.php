@@ -21,7 +21,8 @@ function predict_next_login_average_interval($logins) {
     $last_login_timestamp = end($timestamps);
     $next_login_timestamp = $last_login_timestamp + $average_interval;
 
-    return date('Y-m-d\TH:i:s\Z', $next_login_timestamp);
+    return date('Y-m-d\TH:i:s\Z', (int) $next_login_timestamp);
+
 }
 
 // Algorithm 2: Day and Hour Pattern (Most Recent)
