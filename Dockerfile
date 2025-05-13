@@ -1,8 +1,8 @@
-# Resmi PHP Apache imajını kullan
+# PHP 8.2 ve Apache imajını kullan
 FROM php:8.2-apache
 
-# Gerekli PHP uzantılarını kur (örneğin curl)
+# PHP uzantılarını ekle
 RUN docker-php-ext-install pdo pdo_mysql
 
-# Dosyaları Apache web dizinine kopyala
-COPY public/ /var/www/html/
+# Public dizinini kopyala
+COPY ./public/ /var/www/html/
