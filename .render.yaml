@@ -1,6 +1,5 @@
 services:
   - type: web
     name: php-predictions-api
-    env: php
     plan: free
-    rootDir: public
+    dockerfilePath: Dockerfile
