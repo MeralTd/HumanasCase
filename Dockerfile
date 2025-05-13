@@ -10,8 +10,8 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 # Apache yapılandırması (gerekirse)
 # Eğer özel bir Apache yapılandırmanız varsa, bu satırları kullanabilirsiniz
-COPY apache2.conf /etc/apache2/apache2.conf
-RUN a2enmod rewrite
+# COPY apache2.conf /etc/apache2/apache2.conf
+# RUN a2enmod rewrite
 
 # İzinleri ayarlayın (gerekirse)
 # Projenizin gerektirdiği dizinlere yazma izni vermek için
