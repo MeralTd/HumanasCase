@@ -60,7 +60,7 @@ To run the backend locally, you need to have XAMPP installed on your system.
 
 1.  Download and install XAMPP from [https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html).
 2.  After installation, start the Apache web server and PHP.
-3.  Place the `backend` directory (containing the `api` subdirectory and `predictions.php` file) inside the `htdocs` folder of your XAMPP installation (e.g., `C:\xampp\htdocs\` on Windows or `/Applications/XAMPP/htdocs/` on macOS).
+3.  Place the `backend` directory (containing the `public` subdirectory and `predictions.php` file) inside the `htdocs` folder of your XAMPP installation (e.g., `C:\xampp\htdocs\` on Windows or `/Applications/XAMPP/htdocs/` on macOS).
 
 ### Running the Backend (XAMPP)
 
