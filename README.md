@@ -76,6 +76,12 @@ The backend exposes the following API endpoint for the frontend to fetch predict
 
 - **`backend/public/predictions.php`**: Returns a JSON response containing the last login time and the predicted next login times for each user, calculated by different algorithms.
 
+### Data Source
+
+The user login data is fetched from the following API:
+
+- **`https://case-test-api.humanas.io/`**
+- 
 ### Deployment
 
   Render üzerinde barındırılmaktadır (https://humanascase.onrender.com/predictions.php)
