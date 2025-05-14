@@ -81,7 +81,7 @@ The backend exposes the following API endpoint for the frontend to fetch predict
 The user login data is fetched from the following API:
 
 - **`https://case-test-api.humanas.io/`**
-- 
+  
 ### Deployment
 
   Render üzerinde barındırılmaktadır (https://humanascase.onrender.com/predictions.php)
