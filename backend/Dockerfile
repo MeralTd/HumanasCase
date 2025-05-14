@@ -6,6 +6,9 @@ RUN docker-php-ext-install pdo pdo_mysql
 
 # Public ve backend dizinlerini kopyala
 COPY ./public/ /var/www/html/
+COPY ./data/ /var/www/html/data/
+COPY ./helpers/ /var/www/html/helpers/
+
 # COPY ./backend/ /var/www/html/backend/
 
 # Apache config dosyasına güvenlik ayarları ekle
