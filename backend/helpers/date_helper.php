@@ -21,7 +21,7 @@ function predict_next_login_average_interval($logins) {
     $last_login_timestamp = end($timestamps);
     $next_login_timestamp = $last_login_timestamp + $average_interval;
 
-    return date('Y-m-d\TH:i:s\Z', (int) $next_login_timestamp);
+    return date('Y-m-d H:i:s', (int) $next_login_timestamp);
 
 }
 
@@ -47,7 +47,7 @@ function predict_next_login_day_hour_recent($logins) {
         $predicted_timestamp = strtotime("+1 week", $predicted_timestamp);
     }
 
-    return date('Y-m-d\TH:i:s\Z', $predicted_timestamp);
+    return date('Y-m-d H:i:s', $predicted_timestamp);
 }
 
 // Algorithm 3: Simple Hour Frequency (Top Hour)
@@ -76,6 +76,6 @@ function predict_next_login_hour_frequency($logins) {
     $next_day_timestamp = strtotime("+1 day", strtotime(date('Y-m-d', $last_login_timestamp)));
     $predicted_timestamp = strtotime(date('Y-m-d', $next_day_timestamp) . " {$most_frequent_hour}:00:00");
 
-    return date('Y-m-d\TH:i:s\Z', $predicted_timestamp);
+    return date('Y-m-d H:i:s', $predicted_timestamp);
 }
 ?>
